@@ -231,9 +231,9 @@ void tftgSetBrightness(unsigned char val)
 ```
 void tftglFillPixels(unsigned int x, 
                     unsigned int y, 
-	                unsigned int w, 
-	                unsigned int h, 
-	                const unsigned char* color)
+	            unsigned int w, 
+	            unsigned int h, 
+	            const unsigned char* color)
 ```
 
 * Fills the screen at x/y with size of w/h with pixels of color.
@@ -280,8 +280,8 @@ void tftglUploadFbo()
 ```
 void tftglUploadFboArea(unsigned int x, 
                         unsigned int y, 
-	                    unsigned int w, 
-	                    unsigned int h)
+	                unsigned int w, 
+	                unsigned int h)
 ```
 
 * Copies partial area of pixels of the back buffer and writes them into the LCD. You can use this to copy only areas that need updating. Usefull when rendering GUI.
