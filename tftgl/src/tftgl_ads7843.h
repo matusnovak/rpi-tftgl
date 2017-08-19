@@ -9,6 +9,8 @@
 #define CMD_POS_Z1 (0x3 << 4)
 #define CMD_POS_Z2 (0x4 << 4)
 #define CMD_PWR 0x3
+
+#define TFTGL_IGNORE_TOUCH (0x10)
 	
 static double remap(double value, double InMin, double InMax, double OutMin, double OutMax) {
 	return (value - InMin)*(OutMax - OutMin) / (InMax - InMin) + OutMin;
@@ -19,7 +21,11 @@ static double calibrationData[4][2] = {
 	{0, 0}, {0, 0}, {0, 0}, {0, 0},
 };
 
-unsigned int tftglInitTouch() {
+unsigned int tftglInitTouch(unsigned int flags) {
+	if(flags & TFTGL_IGNORE_TOUCH){
+		return TFTGL_OK;
+	}
+	
 	if (!bcm2835_spi_begin()){
 		errorCode = TFTGL_SPI_ERROR;
 		return TFTGL_ERROR;
