@@ -33,7 +33,7 @@ Since Raspberry Pi supports OpenGL ES 2 the limit is your imagination.
 
 **Is there touch screen support?**
 
-Yes, with support of ADS7843 chip which should be right next to SSD1963 LCD driver. Note that my implementation may not be perfect! Don't tell me I did not warn you! (You can always use any other SPI driven library for ADS7843 chip).
+Yes, with support of ADS7843 chip which should be right next to SSD1963 LCD driver. Note that my implementation may not be perfect! Don't tell me I did not warn you! (You can always use any other SPI driven library for ADS7843 chip). In case you want to disable touch sensor driver, or want to use a different library, you can use `TFTGL_IGNORE_TOUCH` flag when calling `tftglInit()` in order to skip SPI initialisation.
 
 **What extra libraries do I need?**
 
@@ -172,7 +172,7 @@ unsigned int tftglInit(unsigned int flags)
 
 * Initializes the TFT display
 * Returns `TFTGL_OK` or `TFTGL_ERROR` 
-* Available flags: `TFTGL_LANDSCAPE`, `TFTGL_PORTRAIT`, `TFTGL_ROTATE_180`, `TFTGL_MSAA` . You can combine them as: `tftglInit(TFTGL_LANDSCAPE | TFTGL_MSAA);` which will initialize landscape mode with Multi sample (4 samples) anti-aliasign. 
+* Available flags: `TFTGL_LANDSCAPE`, `TFTGL_PORTRAIT`, `TFTGL_ROTATE_180`, `TFTGL_MSAA`, `TFTGL_IGNORE_TOUCH` . You can combine them as: `tftglInit(TFTGL_LANDSCAPE | TFTGL_MSAA);` which will initialize landscape mode with Multi sample (4 samples) anti-aliasign. The `TFTGL_IGNORE_TOUCH` will not initialize SPI driver for the touch sensor. You can use this flag if you decide to use different library to get touch sensor data.
 
 ````
 void tftglTerminate()
