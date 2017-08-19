@@ -114,7 +114,7 @@ Next, download and extract <http://www.airspayce.com/mikem/bcm2835/bcm2835-1.52.
 
 Next, clone this repository by running:
 
-`git clone https://github.com/matusnovak/rpi-tftgl`
+`git clone https://github.com/matusnovak/rpi-tftgl.git`
 
 **Building BCM2835 library**
 
