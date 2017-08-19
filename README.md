@@ -7,7 +7,7 @@ This is a driver/library for TFT LCD SSD1963 (800x480) with OpenGL support. This
 
 The OpenGL part is based on <https://github.com/matusnovak/rpi-opengl-without-x>
 
-<video src="MOV_0.webm" width="640" height="360" preload autoplay loop></video>
+![IMG_3.jpg](IMG_3.jpg)
 
 ![IMG_0.jpg](IMG_0.jpg)
 
