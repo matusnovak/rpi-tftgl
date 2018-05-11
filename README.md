@@ -122,6 +122,7 @@ Go inside the bcm2835 directory that has just been extracted and run make. Don't
 
 ```
 cd bcm2835-1.52
+./configure
 make
 sudo make install
 ```
