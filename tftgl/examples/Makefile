@@ -1,7 +1,7 @@
 CC=gcc
 AR=ar
 CFLAGS=-I/opt/vc/include -I.
-LDFLAGS=-L/opt/vc/lib -L. -lEGL -lGLESv2 -ltftgl -lbcm2835
+LDFLAGS=-L/opt/vc/lib -L. -lbrcmEGL -lbrcmGLESv2 -ltftgl -lbcm2835
 
 .PHONY: default all clean
 
