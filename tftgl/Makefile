@@ -1,7 +1,7 @@
 CC=gcc
 AR=ar
 DISPLAY?=ERROR
-CFLAGS=-I/opt/vc/include -I. -Iinclude -D$(DISPLAY) -O3
+CFLAGS=-I/opt/vc/include -I. -Iinclude -DDISPLAY="$(DISPLAY)" -O3
 prefix?=/usr/local
 
 .PHONY: default all clean
